@@ -1,6 +1,10 @@
 const UnitContainer = () => {
     return(
-        <div>I am UnitContainer</div>
+        <div className="units-container">
+            <button id="celcius">°C</button>
+            <button id="fahrenheit">°F</button>
+            <button id="kelvin">K</button>
+        </div>
     )
 }
 

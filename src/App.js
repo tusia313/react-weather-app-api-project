@@ -5,7 +5,7 @@ import UnitContainer from './components/UnitContainer'
 const App = () => {
 
   return (
-    <div className="weather-conatiner">
+    <div className="weather-app">
       <TodayDisplay/>
       <div className="cards-container">
         <Card/>
