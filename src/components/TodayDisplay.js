@@ -1,13 +1,14 @@
+import '@fortawesome/fontawesome-free/js/all.js'
+
 const TodayDisplay = ({today, location}) => {
-    console.log('TODAY DISTAPLAY', today, location)
     return (
         <div className="today-container">
             <div className="info-container">
                 <h1>Today's forecast</h1>
-                <h3>For the location of lng xxx and lat xxx.</h3>
+                <h3>For the location of lng {location?.longitude} and lat {location?.latitude}.</h3>
             </div>
             <div className="info-container">
-                icon :)
+            <i className="fas fa-cloud-rain"></i >
             </div>
         </div>
     )
