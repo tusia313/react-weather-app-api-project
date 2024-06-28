@@ -1,4 +1,5 @@
-const TodayDisplay = () => {
+const TodayDisplay = ({today, location}) => {
+    console.log('TODAY DISTAPLAY', today, location)
     return (
         <div className="today-container">
             <div className="info-container">

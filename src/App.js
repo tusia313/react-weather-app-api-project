@@ -7,6 +7,7 @@ const App = () => {
 
   const [location, setLocation] = useState(null)
   const [errorMessage, setError] = useState(null)
+  const [data, setData] = useState(null)
 
   const getLocation = () => {
     if (!navigator.geolocation) {
@@ -26,11 +27,12 @@ const App = () => {
   const fetchData = () => {
     const longitude = location?.longitude
     const latitude = location?.latitude
-    fetch(`http://www.7timer.info/bin/api.pl?lon=${longitude}&lat=${latitude}&product=astro&output=xml`)
+    fetch(`http://www.7timer.info/bin/api.pl?lon=${longitude}&lat=${latitude}&product=civil&output=json`)
       .then(response => response.json())
-      .then(json => console.log(json))
+      .then(json => setData(json))
       .catch(err => console.error(err))
   }
+  // console.log(data)
   useEffect(() => {
     getLocation()
       fetchData()
@@ -38,7 +40,7 @@ const App = () => {
 
   return (
     <div className="weather-app">
-      <TodayDisplay />
+      <TodayDisplay today = {data?.dataseries[0]} location = {location} />
       <div className="cards-container">
         <Card />
         <Card />
