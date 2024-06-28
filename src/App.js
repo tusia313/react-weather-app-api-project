@@ -32,7 +32,7 @@ const App = () => {
       .then(json => setData(json))
       .catch(err => console.error(err))
   }
-  // console.log(data)
+
   useEffect(() => {
     getLocation()
       fetchData()
@@ -42,13 +42,9 @@ const App = () => {
     <div className="weather-app">
       <TodayDisplay today = {data?.dataseries[0]} location = {location} />
       <div className="cards-container">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+       {data?.dataseries.slice(0,6).map((dataserie, index) => {
+        return <Card key = {index} day = {dataserie}/>
+       })}
       </div>
       <UnitContainer />
       {errorMessage}

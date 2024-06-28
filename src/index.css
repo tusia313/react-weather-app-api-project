@@ -3,7 +3,7 @@ body {
     justify-content: center;
     height: 100vh;
     align-items: center;
-    color: rgba(58, 58, 58, 0.8);
+    color: rgba(58, 58, 58, 0.7);
     background: url(./images/pexels-pixabay-531767.jpg);
     /* Zdjęcie dodane przez Pixabay: https://www.pexels.com/pl-pl/zdjecie/biale-chmury-531767/ */
     background-size: cover;
@@ -15,8 +15,8 @@ body {
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.5);
+    align-items: left;
+    background: rgba(255, 255, 255, 0.8);
     border-radius: 1rem;
     box-shadow: 0 0.25rem 2rem rgba(0, 0, 0, 0.1 ) ;
     border: 2px solid white;
@@ -40,8 +40,21 @@ body {
 .weather-app .today-container {
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    padding: 2rem;
+    padding: 1rem;
+}
+
+/* .weather-app .today-container .info-container {
+    max-width: 80vw;
+} */
+
+/* wspaniały sposób na pracę z svg! */
+.weather-app .today-container svg {
+    transform: scale(7);
+    margin: 2.5rem 2.5rem 0 0rem;
+}
+
+.weather-app .today-container svg path {
+    fill: rgb(253, 245, 131);
 }
 
 .weather-app .units-container {
