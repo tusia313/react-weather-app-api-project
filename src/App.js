@@ -27,8 +27,9 @@ const App = () => {
   const fetchData = () => {
     const longitude = location?.longitude
     const latitude = location?.latitude
-    fetch(`http://www.7timer.info/bin/api.pl?lon=${longitude}&lat=${latitude}&product=civil&output=json`)
+    fetch(`http://www.7timer.info/bin/api.pl?lon=${longitude}&lat=${latitude}&product=civillight&output=json`)
       .then(response => response.json())
+      // tutaj zapisujemy ten obiekt! w setData
       .then(json => setData(json))
       .catch(err => console.error(err))
   }
@@ -42,7 +43,8 @@ const App = () => {
     <div className="weather-app">
       <TodayDisplay today = {data?.dataseries[0]} location = {location} />
       <div className="cards-container">
-       {data?.dataseries.slice(0,6).map((dataserie, index) => {
+        {/* jak chcemy ograniczyć ilośc danych pobieranych to możemy użyc .slice(0,9) chocby */}
+       {data?.dataseries.map((dataserie, index) => {
         return <Card key = {index} day = {dataserie}/>
        })}
       </div>

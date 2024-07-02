@@ -7,7 +7,7 @@ const getIcon = (weatherType) => {
         case 'clear':
             weatherIcon = <i className="fas fa-sun"></i>
             break
-        case 'mcloudy':
+        case 'cloudy':
             weatherIcon = <i className="fas fa-cloud"></i>
             break
         case 'cloud':
@@ -18,6 +18,12 @@ const getIcon = (weatherType) => {
             break
         case 'ts':
             weatherIcon = <i className="fas fa-bolt"></i>
+            break
+        case 'lightrain':
+            weatherIcon = <i className="fas fa-cloud-rain"></i>
+            break
+        case 'rain':
+            weatherIcon = <i className="fas fa-droplet"></i>
             break
         default:
             weatherIcon = <i className="fas fa-sun"></i>
