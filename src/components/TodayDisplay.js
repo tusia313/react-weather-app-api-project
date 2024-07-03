@@ -10,7 +10,8 @@ const TodayDisplay = ({today, location}) => {
             </div>
             <div className="info-container">
                 {/* wspaniały przykłąd użycia funkcji ! */}
-            {getIcon(today?.weather)}
+                {/* by zapobiec domyślenmu wyswietlaniu się jednej i tej samej ikonki - ajpierw sprawdzamy, czy dzisiejsza pogoda istenije - istenieje, więc default icon raczej nam się nie pojawi :) */}
+            {today?.weather && getIcon(today.weather)}
             </div>
         </div>
     )

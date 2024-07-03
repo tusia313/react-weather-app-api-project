@@ -12,7 +12,7 @@ const Card = ({ day, index, unit }) => {
     return (
         <div className="card-container">
             <h3>{index === 0 ? 'Today' : formattedDate}</h3>
-            <p className="icon-container">{getIcon(day.weather)}</p>
+            <p className="icon-container">{day?.weather && getIcon(day.weather)}</p>
             <p>{day.weather}</p>
             {/* BARDZO ważne! Jak zaimplementować funkcje z jednostkami - trzeba takze utowrzyc zmienną 'unit' - pozniej trzeb abędzie to zmienić za pomocą useState() */}
             <p>{convertUnit(unit, day.temp2m.min)} {unitShorthand} (min)</p>

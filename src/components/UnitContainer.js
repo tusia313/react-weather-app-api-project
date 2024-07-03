@@ -1,10 +1,10 @@
 
-const UnitContainer = ({handleClick}) => {
+const UnitContainer = ({handleClick, unit}) => {
     return(
         <div className="units-container">
-            <button id="celcius" onClick = {handleClick}>°C</button>
-            <button id="fahrenheit" onClick = {handleClick}>°F</button>
-            <button id="kelvin" onClick = {handleClick}>K</button>
+            <button className ={unit === "celcius" ? null : "grayed"} id="celcius" onClick = {handleClick}>°C</button>
+            <button className ={unit === "fahrenheit" ? null : "grayed"} id="fahrenheit" onClick = {handleClick}>°F</button>
+            <button className ={unit === "kelvin" ? null : "grayed"} id="kelvin" onClick = {handleClick}>K</button>
         </div>
     )
 }
