@@ -1,4 +1,4 @@
-import { getIcon } from '../helperFunction'
+import { getIcon , convertUnit } from '../helperFunction'
 
 const Card = ({ day, index }) => {
     // zamieniami na ciąg liter
@@ -8,13 +8,16 @@ const Card = ({ day, index }) => {
     const currentDay = date.slice(6, 8)
     // musimy to z powrotem zamienić na string, ale taki ładny (thx to Date string, inaczej będziemy mieć bardzo skomplikowane formatowanie daty, czas wschodnioeuropejski itp)
     const formattedDate = new Date(year, month - 1, currentDay).toDateString().slice(0, 3)
+
+    const unit = 'fahrenheit'
     return (
         <div className="card-container">
             <h3>{index === 0 ? 'Today' : formattedDate}</h3>
             <p className="icon-container">{getIcon(day.weather)}</p>
             <p>{day.weather}</p>
-            <p>{day.temp2m.min} min</p>
-            <p>{day.temp2m.max} max</p>
+            {/* BARDZO ważne! Jak zaimplementować funkcje z jednostkami - trzeba takze utowrzyc zmienną 'unit' - pozniej trzeb abędzie to zmienić za pomocą useState() */}
+            <p>{convertUnit(unit, day.temp2m.min)} min</p>
+            <p>{convertUnit(unit, day.temp2m.max)} max</p>
         </div>
     )
 }
