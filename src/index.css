@@ -28,13 +28,16 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .weather-app .cards-container .card-container {
-    width: 2.5rem;
+    width: 6rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .weather-app .today-container {

@@ -8,6 +8,7 @@ const App = () => {
   const [location, setLocation] = useState(null)
   const [errorMessage, setError] = useState(null)
   const [data, setData] = useState(null)
+  const [unit, setUnit] = useState('celcius')
 
   const getLocation = () => {
     if (!navigator.geolocation) {
@@ -33,6 +34,10 @@ const App = () => {
       .then(json => setData(json))
       .catch(err => console.error(err))
   }
+  const handleClick = (e) => {
+    setUnit(e.target.id)
+  }
+  console.log(unit)
 
   useEffect(() => {
     getLocation()
@@ -47,10 +52,10 @@ const App = () => {
         {/* .map() jako że chcemu utowrzyć NOWY łańcuch/nowe dane */}
        {data?.dataseries.map((dataserie, index) => {
         // index jest nam potrzebny do nazw dni tygodnia!
-        return <Card key = {index} day = {dataserie} index = {index}/>
+        return <Card key = {index} day = {dataserie} index = {index} unit= {unit}/>
        })}
       </div>
-      <UnitContainer />
+      <UnitContainer handleClick={handleClick} />
       {errorMessage}
     </div>
   )

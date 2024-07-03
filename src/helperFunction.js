@@ -53,7 +53,7 @@ const convertUnit = (unit, currentTemp) => {
             temp = convertToKelvin(currentTemp)
             break
     } 
-    console.log(temp)
+  
     return temp
 }
 // bo eksportujemy wiele rzeczy => "eksport nazwany" jest bardziej przejrzysty, gdy z modułu eksportowanych jest wiele rzeczy.
