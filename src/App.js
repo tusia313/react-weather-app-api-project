@@ -44,8 +44,10 @@ const App = () => {
       <TodayDisplay today = {data?.dataseries[0]} location = {location} />
       <div className="cards-container">
         {/* jak chcemy ograniczyć ilośc danych pobieranych to możemy użyc .slice(0,9) chocby */}
+        {/* .map() jako że chcemu utowrzyć NOWY łańcuch/nowe dane */}
        {data?.dataseries.map((dataserie, index) => {
-        return <Card key = {index} day = {dataserie}/>
+        // index jest nam potrzebny do nazw dni tygodnia!
+        return <Card key = {index} day = {dataserie} index = {index}/>
        })}
       </div>
       <UnitContainer />
