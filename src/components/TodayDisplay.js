@@ -6,6 +6,7 @@ const TodayDisplay = ({today, location}) => {
         <div className="today-container">
             <div className="info-container">
                 <h1>Today's forecast</h1>
+                {/* znaki ? to dlatrgo, że przez chyba pierwsze 2 razy lokalizacja jest "null", ale później to już leci */}
                 <h3>For the location of lng {location?.longitude.toFixed(2)} and lat {location?.latitude.toFixed(2)}.</h3>
             </div>
             <div className="info-container">
