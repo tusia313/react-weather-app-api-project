@@ -28,9 +28,10 @@ const App = () => {
   const fetchData = () => {
     const longitude = location?.longitude
     const latitude = location?.latitude
+    // uwaga, jeszcze na końcu api jest zmiana outputu na json zamiast xml
     fetch(`http://www.7timer.info/bin/api.pl?lon=${longitude}&lat=${latitude}&product=civillight&output=json`)
       .then(response => response.json())
-      // tutaj zapisujemy ten obiekt! w setData
+      // tutaj zapisujemy daną lokalizajcę w setData !
       .then(json => setData(json))
       .catch(err => console.error(err))
   }
