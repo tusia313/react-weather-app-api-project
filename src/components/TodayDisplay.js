@@ -10,9 +10,10 @@ const TodayDisplay = ({today, location}) => {
                 <h3>For the location of lng {location?.longitude.toFixed(2)} and lat {location?.latitude.toFixed(2)}.</h3>
             </div>
             <div className="info-container">
-                {/* wspaniały przykłąd użycia funkcji ! */}
-                {/* by zapobiec domyślenmu wyswietlaniu się jednej i tej samej ikonki - ajpierw sprawdzamy, czy dzisiejsza pogoda istenije - istenieje, więc default icon raczej nam się nie pojawi :) */}
+                {/* wspaniały przykład użycia funkcji ! */}
+                {/* by zapobiec domyślenmu wyswietlaniu się jednej i tej samej ikonki - najpierw sprawdzamy, czy dzisiejsza pogoda istnieje - istnieje, więc default icon raczej nam się nie pojawi :) */}
             {today?.weather && getIcon(today.weather)}
+            {/* teź warto zerknąc do css jak svg jest powiększany za pomocą transform */}
             </div>
         </div>
     )
