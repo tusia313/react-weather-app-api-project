@@ -4,12 +4,12 @@
 
 ![first page](./src/img/screen_1.png)
 
- and here we have a Kalvin degrees... :)
-
+ and here we have a Kelvin degrees... 
 ![first page](./src/img/screen_2.png)
 
 ## 🃏 Technologies
 
++ some JS
 +  React !
 
 ## 🃏 Inspiration
