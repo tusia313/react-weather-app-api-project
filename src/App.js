@@ -52,7 +52,7 @@ const App = () => {
         {/* jak chcemy ograniczyć ilośc danych pobieranych to możemy użyc .slice(0,9) chocby */}
         {/* .map() jako że chcemu utowrzyć NOWY łańcuch/nowe dane */}
        {data?.dataseries.map((dataserie, index) => {
-        // index jest nam potrzebny do nazw dni tygodnia!
+        // index jest nam potrzebny do nazwy dnia "TODAY", key jest tylko po to, by w przeglądarce nie było błędu
         return <Card key = {index} day = {dataserie} index = {index} unit= {unit}/>
        })}
       </div>
