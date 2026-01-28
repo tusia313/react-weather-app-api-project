@@ -1,16 +1,28 @@
-# 🦩 Weather widget project 🦩
+# 🦩 Weather Widget (React)🦩 
 
- 🌼 My second React's project, focusing on weather API, useState(), useEffect() and whole banch of other things. Also have some fun with units converter (still don't know why we ALL aren't using Celsius). The weather will be shown depending of the lon/lat we actually have/are. 
+A small React app that displays current weather based on the user’s location (lat/lon) and allows unit conversion.
 
 ![first page](./src/img/screen_1.png)
 
- and here we have a Kelvin degrees... 
+and here we have a Kelvin degrees... 
 ![first page](./src/img/screen_2.png)
 
-## 🃏 Technologies
 
-+ some JS
-+  React !
+## Key features
+- Fetches data from a weather API based on geolocation (lat/lon)
+- Displays weather details and basic UI states (loading / error)
+- Unit conversion (e.g., Kelvin/Celsius/Fahrenheit)
 
-## 🃏 Inspiration
-This little project is part of an amazing Full Stack Developer Course created by  ♥ Ania Kubow ♥. Love this women, her sense of humor and ability to explain hard code-things in a way that I finally understand. 🏆
+## Tech stack
+- React (hooks: useState, useEffect)
+- JavaScript (ES6+)
+- CSS
+
+## How to run locally
+1. Install dependencies: `npm install`
+2. Start the app: `npm run start`
+
+## Notes
+This project was created as part of learning React fundamentals and working with external APIs by wonderful by  ♥ Ania Kubow ♥..
+ 
+
